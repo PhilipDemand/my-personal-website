@@ -1,5 +1,14 @@
-const h2 = document.createElement("h2");
-h2.textContent = "This content added by JavaScript";
+let counterVal = 0;
 
-document.querySelector("body").appendChild(h2);
+function incrementClick() {
+    updateDisplay(++counterVal);
+}
 
+function resetCounter() {
+    counterVal = 0;
+    updateDisplay(counterVal);
+}
+
+function updateDisplay(val) {
+    document.getElementById("counter-label").innerHTML = val;
+}
